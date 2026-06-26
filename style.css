@@ -1,10 +1,12 @@
-/* ===== GENERAL ===== */
+/* ===== RESET ===== */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ===== BODY ===== */
 
 body {
     background-color: #0e0e0e;
@@ -15,107 +17,136 @@ body {
 /* ===== HEADER ===== */
 
 header {
-    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 60px 20px 40px;
+    text-align: center;
 }
 
 header h1 {
     font-size: 42px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 header p {
     color: #bdbdbd;
     font-size: 18px;
+    line-height: 1.6;
 }
 
-/* ===== TARJETAS ===== */
+/* ===== GRID ===== */
 
 .cards {
 
-    width: 90%;
+    width: 92%;
     max-width: 1300px;
 
-    margin: 0 auto 60px auto;
+    margin: 0 auto 70px auto;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
     gap: 30px;
 
 }
 
+/* ===== TARJETA ===== */
+
 .card {
 
     background-color: #181818;
 
-    border-radius: 14px;
+    border-radius: 16px;
 
-    padding: 35px 25px;
-
-    text-align: center;
+    padding: 35px 28px;
 
     text-decoration: none;
 
     color: white;
 
-    border: 2px solid #2a2a2a;
+    text-align: center;
 
-    border-top: 6px solid var(--color);
+    border-top: 8px solid var(--color);
 
-    transition: 0.25s;
+    box-shadow: 0 6px 18px rgba(0,0,0,.45);
 
-    box-shadow: 0 5px 20px rgba(0,0,0,.45);
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
 
 }
 
+/* ===== HOVER ===== */
+
 .card:hover {
 
-    transform: translateY(-8px) scale(1.03);
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 28px rgba(0,0,0,.55);
 
     filter: brightness(1.08);
 
 }
 
+/* ===== ICONO ===== */
+
 .icon {
 
-    font-size: 60px;
+    font-size: 64px;
 
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 
 }
+
+/* ===== TITULO ===== */
 
 .card h2 {
 
-    font-size: 25px;
+    font-size: 27px;
 
     margin-bottom: 18px;
 
+    line-height: 1.3;
+
 }
+
+/* ===== TEXTO ===== */
 
 .card p {
 
-    color: #bfbfbf;
+    color: #c8c8c8;
 
-    line-height: 1.5;
+    line-height: 1.6;
 
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 
 }
+
+/* ===== BOTON ===== */
 
 .card span {
 
     display: inline-block;
 
-    padding: 12px 26px;
+    padding: 12px 30px;
 
-    border-radius: 8px;
+    border-radius: 10px;
+
+    background-color: var(--color);
+
+    color: white;
 
     font-weight: bold;
 
-    background: var(--color);
+    transition: .2s;
 
-    color: white;
+}
+
+.card:hover span {
+
+    transform: scale(1.05);
 
 }
 
@@ -125,33 +156,39 @@ footer {
 
     text-align: center;
 
+    color: #8d8d8d;
+
     padding: 30px;
 
-    color: #888;
+    border-top: 1px solid #242424;
 
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== TABLET ===== */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .cards {
 
-        grid-template-columns: 1fr;
-
-        width: 92%;
+        grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
 
     }
 
+}
+
+/* ===== CELULAR ===== */
+
+@media (max-width: 700px) {
+
     header {
 
-        padding-top: 40px;
+        padding: 45px 18px 30px;
 
     }
 
     header h1 {
 
-        font-size: 34px;
+        font-size: 32px;
 
     }
 
@@ -161,15 +198,25 @@ footer {
 
     }
 
+    .cards {
+
+        width: 94%;
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+    }
+
     .card {
 
-        padding: 30px 22px;
+        padding: 28px 22px;
 
     }
 
     .icon {
 
-        font-size: 48px;
+        font-size: 52px;
 
     }
 
