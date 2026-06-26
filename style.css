@@ -55,7 +55,13 @@ header p {
 
 .card {
 
-    background-color: #181818;
+    background: linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--color) 25%, #181818 75%),
+        #181818
+    );
+
+    border: 2px solid var(--color);
 
     border-radius: 16px;
 
@@ -66,8 +72,6 @@ header p {
     color: white;
 
     text-align: center;
-
-    border-top: 8px solid var(--color);
 
     box-shadow: 0 6px 18px rgba(0,0,0,.45);
 
