@@ -32,6 +32,7 @@ header p {
 /* ===== TARJETAS ===== */
 
 .cards {
+
     width: 90%;
     max-width: 1300px;
 
@@ -39,10 +40,13 @@ header p {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
     gap: 30px;
+
 }
 
 .card {
+
     background-color: #181818;
 
     border-radius: 14px;
@@ -52,43 +56,52 @@ header p {
     text-align: center;
 
     text-decoration: none;
+
     color: white;
 
     border: 2px solid #2a2a2a;
 
+    border-top: 6px solid var(--color);
+
     transition: 0.25s;
 
     box-shadow: 0 5px 20px rgba(0,0,0,.45);
+
 }
 
 .card:hover {
-    transform: translateY(-8px) scale(1.03);
-    filter: brightness(1.08);
-}
 
-/* ===== ICONOS ===== */
+    transform: translateY(-8px) scale(1.03);
+
+    filter: brightness(1.08);
+
+}
 
 .icon {
-    font-size: 60px;
-    margin-bottom: 20px;
-}
 
-/* ===== TITULOS ===== */
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+}
 
 .card h2 {
-    font-size: 25px;
-    margin-bottom: 18px;
-}
 
-/* ===== DESCRIPCION ===== */
+    font-size: 25px;
+
+    margin-bottom: 18px;
+
+}
 
 .card p {
-    color: #bfbfbf;
-    line-height: 1.5;
-    margin-bottom: 30px;
-}
 
-/* ===== BOTON ===== */
+    color: #bfbfbf;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+
+}
 
 .card span {
 
@@ -100,46 +113,25 @@ header p {
 
     font-weight: bold;
 
+    background: var(--color);
+
     color: white;
-}
 
-/* ===== COLORES ===== */
-
-.electronica {
-    border-top: 6px solid #2ecc71;
-}
-
-.electronica span {
-    background-color: #2ecc71;
-}
-
-.teleco {
-    border-top: 6px solid #3498db;
-}
-
-.teleco span {
-    background-color: #3498db;
-}
-
-.quimica {
-    border-top: 6px solid #9b59b6;
-}
-
-.quimica span {
-    background-color: #9b59b6;
 }
 
 /* ===== FOOTER ===== */
 
 footer {
+
     text-align: center;
 
     padding: 30px;
 
     color: #888;
+
 }
 
-/* ===== CELULAR ===== */
+/* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
 
@@ -148,36 +140,43 @@ footer {
         grid-template-columns: 1fr;
 
         width: 92%;
+
     }
 
     header {
 
         padding-top: 40px;
+
     }
 
     header h1 {
 
         font-size: 34px;
+
     }
 
     header p {
 
         font-size: 16px;
+
     }
 
     .card {
 
         padding: 30px 22px;
+
     }
 
     .icon {
 
         font-size: 48px;
+
     }
 
     .card h2 {
 
         font-size: 22px;
+
     }
 
 }
